@@ -166,7 +166,7 @@ function normalizarLibro(libro) {
                   </p>
                 )}
                 <div className="acciones-card">
-                  <button type="button">Ver detalle</button>
+
                   <button type="button" className="btn-editar" onClick={() => onEditarLibro?.(libro)}>
                     Editar
                   </button>
