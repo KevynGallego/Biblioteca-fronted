@@ -1,0 +1,350 @@
+:root {
+  color-scheme: dark;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #f8fafc;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+}
+
+#root {
+  min-height: 100vh;
+}
+
+.catalogo {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 48px 24px 64px;
+}
+
+.hero {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(10px);
+  border-radius: 24px;
+  padding: 32px;
+  margin-bottom: 28px;
+  box-shadow: 0 20px 45px rgba(15, 23, 42, 0.25);
+}
+
+.eyebrow {
+  margin: 0 0 8px;
+  text-transform: uppercase;
+  letter-spacing: 0.3em;
+  font-size: 0.8rem;
+  color: #93c5fd;
+  font-weight: 700;
+}
+
+.hero h1 {
+  margin: 0 0 10px;
+  font-size: clamp(1.9rem, 3vw, 2.7rem);
+}
+
+.hero-text {
+  margin: 0;
+  max-width: 640px;
+  color: #cbd5e1;
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+.lista-libros {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.buscador {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 16px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.buscador input,
+.buscador select,
+.buscador button {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 0.95rem;
+}
+
+.buscador button {
+  background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%);
+  color: white;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.cards-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+}
+
+.book-card {
+  background: linear-gradient(145deg, #ffffff 0%, #f8fafc 100%);
+  color: #0f172a;
+  border-radius: 20px;
+  padding: 24px;
+  box-shadow: 0 12px 30px rgba(15, 23, 42, 0.16);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 36px rgba(15, 23, 42, 0.22);
+}
+
+.card-badge {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+
+.book-card h2 {
+  margin: 0 0 8px;
+  font-size: 1.25rem;
+}
+
+.author {
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: #475569;
+}
+
+.description {
+  margin: 0 0 16px;
+  line-height: 1.6;
+  color: #334155;
+}
+
+.book-card button {
+  border: none;
+  background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%);
+  color: white;
+  padding: 10px 14px;
+  border-radius: 999px;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.book-card button:hover {
+  opacity: 0.95;
+}
+
+.acciones-card {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.btn-editar {
+  background: #f59e0b !important;
+}
+
+.btn-eliminar {
+  background: #dc2626 !important;
+}
+
+.confirmacion-eliminar {
+  margin-top: 12px;
+  padding: 12px;
+  border-radius: 12px;
+  background: #fee2e2;
+  color: #991b1b;
+}
+
+.confirmacion-eliminar p {
+  margin: 0 0 10px;
+  font-weight: 600;
+}
+
+.acciones-confirmacion {
+  display: flex;
+  gap: 8px;
+}
+
+.btn-confirmar {
+  background: #dc2626 !important;
+}
+
+.btn-cancelar {
+  background: #64748b !important;
+}
+
+.meta {
+  margin: 0 0 14px;
+  color: #64748b;
+  font-size: 0.92rem;
+}
+
+.estado {
+  padding: 16px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+}
+
+.estado.error {
+  color: #fecaca;
+}
+
+.paginacion {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.paginacion button {
+  border: none;
+  border-radius: 999px;
+  padding: 8px 14px;
+  cursor: pointer;
+  background: #2563eb;
+  color: white;
+  font-weight: 600;
+}
+
+.paginacion button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.contenido {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.form-wrapper {
+  max-width: 420px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.mensaje-vacio {
+  padding: 24px;
+  border-radius: 16px;
+  background: rgba(255, 255, 255, 0.08);
+  color: #e2e8f0;
+  text-align: center;
+}
+
+.formulario-libro {
+  background: rgba(255, 255, 255, 0.95);
+  color: #0f172a;
+  padding: 24px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.16);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.formulario-libro h2 {
+  margin: 0 0 4px;
+  font-size: 1.3rem;
+}
+
+.formulario-libro label {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.formulario-libro input {
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+  padding: 10px 12px;
+  font-size: 1rem;
+}
+
+.formulario-libro input:focus {
+  outline: 2px solid #60a5fa;
+  border-color: #60a5fa;
+}
+
+.error {
+  color: #dc2626;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.mensaje {
+  margin: 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.mensaje.exito {
+  color: #0f766e;
+}
+
+.mensaje.error {
+  color: #dc2626;
+}
+
+.acciones-principales {
+  display: flex;
+  justify-content: flex-start;
+  margin-bottom: 20px;
+}
+
+.btn-crear {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%);
+  color: white;
+}
+
+.acciones {
+  display: flex;
+  gap: 10px;
+  margin-top: 6px;
+}
+
+.acciones button {
+  border: none;
+  border-radius: 999px;
+  padding: 10px 14px;
+  cursor: pointer;
+  font-weight: 700;
+  background: linear-gradient(135deg, #0f766e 0%, #2563eb 100%);
+  color: white;
+}
+
+.btn-secundario {
+  background: #e2e8f0 !important;
+  color: #0f172a !important;
+}
+
+@media (max-width: 900px) {
+  .form-wrapper {
+    max-width: 100%;
+  }
+}
