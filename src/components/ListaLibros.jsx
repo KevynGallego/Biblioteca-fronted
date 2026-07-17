@@ -10,7 +10,7 @@ function normalizarLibro(libro) {
   const anio = libro.anio ?? libro.year ?? libro.año
 
   const descripcion = String(descripcionOriginal).trim()
-  const esDescripcionVacia = !descripcion || descripcion === 'Sin descripción disponible' || descripcion === 'Sin descripción disponible.'
+  
 
   return {
     id: libro.id ?? libro._id,
@@ -140,13 +140,7 @@ function normalizarLibro(libro) {
               placeholder="Buscar por título o autor"
               onChange={manejarCambioFiltro}
             />
-            <input
-              type="number"
-              name="anio"
-              value={filtros.anio}
-              placeholder="Año"
-              onChange={manejarCambioFiltro}
-            />
+            
             <select name="calificacion" value={filtros.calificacion} onChange={manejarCambioFiltro}>
               <option value="">Calificación</option>
               <option value="1">1</option>
