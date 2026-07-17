@@ -156,15 +156,28 @@ function FormularioLibro({ libroInicial = null, onGuardar, onCancelar }) {
       {mensaje && <p className={`mensaje ${mensaje.includes('correctamente') ? 'exito' : 'error'}`}>{mensaje}</p>}
 
       <div className="acciones">
-        <button type="submit" disabled={cargando}>
-          {cargando ? 'Guardando...' : 'Guardar'}
-        </button>
-        {onCancelar && (
-          <button type="button" className="btn-secundario" onClick={onCancelar}>
-            Cancelar
-          </button>
-        )}
-      </div>
+  <button type="submit" disabled={cargando}>
+    {cargando ? 'Guardando...' : 'Guardar'}
+  </button>
+
+  {onCancelar && (
+    <button
+      type="button"
+      className="btn-secundario"
+      onClick={onCancelar}
+      disabled={cargando}
+    >
+      Cancelar
+    </button>
+  )}
+</div>
+
+{cargando && (
+  <div className="loading-spinner">
+    <span className="spinner"></span>
+    <span>Guardando libro...</span>
+  </div>
+)}
     </form>
   )
 }

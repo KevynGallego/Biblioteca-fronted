@@ -16,7 +16,6 @@ function normalizarLibro(libro) {
     id: libro.id ?? libro._id,
     titulo: libro.titulo ?? libro.title ?? libro.nombre ?? libro.name ?? 'Sin título',
     autor: libro.autor ?? libro.author ?? 'Sin autor',
-    categoria: libro.categoria ?? libro.category ?? libro.genero ?? 'General',
     calificacion: libro.calificacion ?? libro.rating,
   }
 }
